@@ -1,0 +1,50 @@
+{% include "header.html" %}<!-- jinja -->
+
+
+<h1 style="leftmargin: 0px">Eine Übersicht deiner erfassten Ausgaben</h1>
+<h3>Du kannst nach allen erfassten Attributen suchen.</h3>
+
+
+<!-- Suchfunktion innerhalb der Erfassten Kosten Tabelle. Quelle: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_filters_table -->
+
+<script> $(document).ready(function(){
+   $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+             $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+             });
+        });
+   });
+</script>
+
+  <input class="form-control" id="myInput" type="text" placeholder="Suche">
+    <table class = "table">
+       <thead>
+            <tr>
+              {% for header in headings %} <!-- Wurde im main.py konfiguriert-->
+              <th> {{ header }}</th>
+              {% endfor %}
+            </tr>
+        </thead>
+       <tbody id="myTable">
+                 {% for key, value in data.items() %}
+      <tr>
+        <!-- Hier werden die unterschiedlichen Keys aufgerufen-->
+            <td>{{ value.ausgaben_datum }}</td>
+            <td>{{ value.ausgaben_typ }}</td>
+            <td>{{ value.ausgaben_konto }}</td>
+            <td>{{ value.ausgaben_betrag }}</td>
+      </tr>
+          {% endfor %}
+       </tbody>
+   </table>
+
+
+
+
+<h3>Erfass neue Ausgaben.</h3>
+
+<a href="{{ url_for('ausgaben_save')}}" class="btn btn-primary" role="button" style="margin-left: 10px; margin-top: 30px" data-bs-toggle="button" >Ausgaben erfassen</a>
+
+
+{% include "footer.html" %}<!-- jinja -->

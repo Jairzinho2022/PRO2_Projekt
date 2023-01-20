@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+<div style="margin:2%">
+    <div class="input-group mb-3">
+        <h5>Folgende Daten wurden erfasst: {{ ausgaben_typ }}.</h5>
+        <br>
+    </div>
+    <div>
+        <table class="table">
+            <tr>
+              {% for header in headings %}  <!-- header aus main.py-->
+              <th> {{ header }}</th>
+              {% endfor %}
+            </tr>
+            <tr>
+              <!-- abruf der daten welche neu in die datenbank gespeichert wurden -->
+              <td>{{ ausgaben_datum }}</td>
+              <td>{{ ausgaben_typ }}</td>
+              <td>{{ ausgaben_konto }}</td>
+              <td>{{ ausgaben_betrag }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- button um wieder zurück zu kommen -->
+<a href="{{ url_for('ausgaben_save')}}" class="btn btn-primary" role="button" style="margin-left: 5px; margin-top: 10px" data-bs-toggle="button" >Zurück</a>
+
+
+{% include "footer.html" %}

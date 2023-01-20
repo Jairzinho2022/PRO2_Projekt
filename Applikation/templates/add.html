@@ -1,0 +1,58 @@
+{% include "header.html" %} <!-- jinja -->
+
+<!-- Formular für die erstllung neuer Kosten. Am Schluss wird gepspeichert -->
+
+<div class="row row-cols-1 row-cols-md-2 g-4" style="margin:0%">
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-md-7 col-lg-8">
+            <h2 class="titel" style= "margin-left: 0px;">Ausgaben erfassen</h2>
+        </div>
+        <br>
+        <div class="col-sm-10 form-floating-height:10px">
+            <p>Bezahlt am Datum:</p>
+            <input type="date" class="form-control" id="ausgaben_datum" name="ausgaben_datum">
+        </div>
+        <br>
+        <!-- Hier sind die Kategorien definiert -->
+        <div class="col-sm-10 form-floating-height:10px">
+            <p>Typ</p>
+            <select class="form-select" id="ausgaben_typ" name="ausgaben_typ" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="Miete">Miete</option>
+              <option value="Krankenversicherung">Krankenversicherung</option>
+              <option value="Lebensmittel">Lebensmittel</option>
+              <option value="Ausgang">Ausgang</option>
+              <option value="Kleider">Kleider</option>
+              <option value="Schule">Schule</option>
+              <option value="IT">IT-Beschaffung</option>
+              <option value="Diverses">Diverses</option>
+            </select>
+        </div>
+        <br>
+        <!-- auswahl der dropdown aufzählung von welchem Konto bezahlt wurde -->
+        <div class="col-sm-10 form-floating-height:10px">
+            <p>Konto</p>
+            <select class="form-select" id="ausgaben_konto" name="ausgaben_konto" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="Bar">Bar</option>
+              <option value="Bankkonto">Bankkonto</option>
+              <option value="Kreditkarte">Kreditkarte</option>
+              <option value="Bitcoin">Bitcoin</option>
+            </select>
+        </div>
+        <br>
+        <!-- eingabe des Betrags freiwählbar durch Anwender -->
+        <div class="col-sm-10 form-floating-height:10px">
+            <p>Betrag</p>
+             <input type="number" class="form-control" id="ausgaben_betrag" name="ausgaben_betrag" placeholder="Betrag eingeben">
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary" style="margin-left: 0px; margin-top: 30px" >Speichern</button>
+    </form>
+</div>
+
+
+
+
+{% include "footer.html" %} <!-- jinja -->

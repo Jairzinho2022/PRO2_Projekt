@@ -1,0 +1,50 @@
+{
+    "ausgaben 1": {
+        "ausgaben_datum": "2023-01-01",
+        "ausgaben_typ": "Miete",
+        "ausgaben_konto": "Bankkonto",
+        "ausgaben_betrag": "2000"
+    },
+    "ausgaben 2": {
+        "ausgaben_datum": "2023-01-14",
+        "ausgaben_typ": "Krankenversicherung",
+        "ausgaben_konto": "Bankkonto",
+        "ausgaben_betrag": "300"
+    },
+    "ausgaben 3": {
+        "ausgaben_datum": "2023-01-14",
+        "ausgaben_typ": "Lebensmittel",
+        "ausgaben_konto": "Bar",
+        "ausgaben_betrag": "50"
+    },
+    "ausgaben 4": {
+        "ausgaben_datum": "2022-12-26",
+        "ausgaben_typ": "Ausgang",
+        "ausgaben_konto": "Kreditkarte",
+        "ausgaben_betrag": "70"
+    },
+    "ausgaben 5": {
+        "ausgaben_datum": "2022-12-06",
+        "ausgaben_typ": "Kleider",
+        "ausgaben_konto": "Bitcoin",
+        "ausgaben_betrag": "39"
+    },
+    "ausgaben 6": {
+        "ausgaben_datum": "2022-11-30",
+        "ausgaben_typ": "Schule",
+        "ausgaben_konto": "Bankkonto",
+        "ausgaben_betrag": "960"
+    },
+    "ausgaben 7": {
+        "ausgaben_datum": "2022-10-11",
+        "ausgaben_typ": "IT",
+        "ausgaben_konto": "Kreditkarte",
+        "ausgaben_betrag": "2500"
+    },
+    "ausgaben 8": {
+        "ausgaben_datum": "2022-10-06",
+        "ausgaben_typ": "Diverses",
+        "ausgaben_konto": "Bitcoin",
+        "ausgaben_betrag": "100"
+    }
+}

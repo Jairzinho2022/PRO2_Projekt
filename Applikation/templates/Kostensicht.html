@@ -1,0 +1,104 @@
+{% include "header.html" %}<!-- jinja -->
+
+<h3>Deine Ausgaben findest du in der folgenden Übersicht nach Kategorie summiert</h3>
+
+<!-- Die Kacheln wurden mit Hilfe von Bootstrap erstellt. Quelle: https://getbootstrap.com/docs/5.3/components/card/#about -->
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_krankenversicherung.jpg" class="img-fluid rounded-start" alt="Bild_Krankenversicherung"> <!-- alt zeigt den Text an falls das Bild nicht geladen werden kann. Bildquelle: https://pixabay.com/photos/thermometer-medications-tablets-1539191/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Krankenversicherung Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_krankenversicherung }} CHF </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_lebensmittel.jpg" class="img-fluid rounded-start" alt="bild_lebensmittel"> <!-- Bildquelle: https://pixabay.com/photos/coins-calculator-budget-1015125/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Lebensmittel Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_lebensmittel }} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_kleider.jpg" class="img-fluid rounded-start" alt="bild_kleider"> <!-- Bildquelle: https://pixabay.com/photos/shirts-hangers-exhibition-store-428600/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Kleider Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_kleider }} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_schule.jpg" class="img-fluid rounded-start" alt="bild_schule"> <!-- Bildquelle: https://pixabay.com/photos/pencils-notebooks-stack-762555/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Schule Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_schule }} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_it.jpg" class="img-fluid rounded-start" alt="bild_it"> <!-- Bildquelle: https://pixabay.com/photos/computer-laptop-work-place-mouse-2982270/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">IT-Beschaffung Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_it }} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_diverses.jpg" class="img-fluid rounded-start" alt="bild_diverses"> <!-- Bildquelle: https://pixabay.com/photos/marbles-glass-marbles-balls-round-1659398/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Diverse Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_diverses}} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/bild_bier.jpg" class="img-fluid rounded-start" alt="bild_bier"> <!-- Bildquelle: https://pixabay.com/photos/bar-caf%c3%a9-paris-bi%c3%a8re-coffee-beer-604633/ -->
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Ausgang Ausgaben:</h5>
+        <p class="card-text">{{ ausgaben_ausgang }} CHF</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}

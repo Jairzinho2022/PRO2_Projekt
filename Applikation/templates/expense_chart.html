@@ -1,0 +1,5 @@
+<div id="graph"></div>
+<script>
+    var plot = {{ expense_chart|safe }};
+    Plotly.newPlot("graph", plot);
+</script>
